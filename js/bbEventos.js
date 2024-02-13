@@ -273,9 +273,9 @@ function returnAll() {
     return BB;
 }
 function returnNumber(total) {
-    var result = [];
-    for (let i = 0; i < total - 1; i++) {
-        result.push = BB[i];
+    var result = new Array(total);
+    for (let i = 0; i < total; i++) {
+        result[i] = BB[i];
     }
     return result;
 }
