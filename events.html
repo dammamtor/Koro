@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koro Eventos</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="events.css">
+</head>
+
+<body style="background: #000000">
+    <nav id="header" class="fixed w-full z-30 top-0 text-black" style="background: #000000">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+            <div class="pl-4 flex items-center">
+
+                <svg width="40" height="40" viewBox="0 0 20 100">
+                    <polygon points="0,50 100,0 100,100" fill="white" />
+                </svg>
+                <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                    href="#"> Koro
+                </a>
+            </div>
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center justify-between lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+                id="nav-content">
+
+
+                <select
+                    class="py-3 px-4 ml-9 pe-9 block w-52 border-gray-200 rounded-full text-sm focus:border-black-500 focus:ring-black-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-black-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                    <option selected>Selecciona ciudad</option>
+                    <option>Sevilla</option>
+                    <option>Madrid</option>
+                    <option>Barcelona</option>
+                </select>
+
+
+                <button id="navAction"
+                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    Log in
+                </button>
+            </div>
+        </div>
+        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+
+
+
+    <div class="w-full max-w-3xl">
+
+        <input type="text" id="search" placeholder="Enter your search here"
+            class="border-0 focus:ring-0 focus:outline-0 w-[60%] bg-slate-600 rounded-l-lg pl-4 text-sm text-slate-200">
+        <button
+            class="ring-4 ring-slate-600 ring-offset-[0.55rem] shadow-transparent ring-offset-slate-800 hover:ring-offset-rose-500  hover:bg-rose-500 bg-transparent rounded-[50%] active:scale-95 cursor-pointer">
+            <h2
+                class="rounded-full border-4 border-rose-500 w-16 h-16  text-rose-500 text-2xl text-center justify-center flex items-center font-semibold hover:border-slate-600 hover:text-slate-600">
+                GO</h2>
+        <!-- </button> -->
+
+
+    </div>
+</body>
+
+
+
+
+
+
+
+</html>
