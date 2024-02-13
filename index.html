@@ -28,7 +28,7 @@
 
     }
 
-  
+
 
     .gradient {
       background: linear-gradient(270deg, var(--main-color3) 0%, var(--main-color2) 100%);
@@ -47,7 +47,7 @@
 
     .seccion {
       width: 100%;
-      
+
       background-color: var(--main-color2);
 
     }
@@ -59,54 +59,60 @@
         'h1 h1 h2 h2'
         'h3 h4 h5 h6';
 
-        font-family: 'CMU Typewriter Text', sans-serif;
+      font-family: 'CMU Typewriter Text', sans-serif;
       font-size: 1.7em;
       font-weight: 900;
-      color:black;
-      
-      
+      color: black;
+
+
       text-align: center;
-       
+
       /* grid-gap: 1px; */
     }
 
-    .container1{
+    .container1 {
       border: solid black 1px;
       padding-top: 1em;
     }
 
-    .uno{
-     
+    .uno {
+
       grid-area: h1;
       background-image: url("./images/vista-frontal-mujer-sonriente-fuegos-artificiales.jpg");
       background-repeat: no-repeat;
-      background-size:cover;
+      background-size: cover;
       width: 100%;
     }
-    .dos{
+
+    .dos {
       grid-area: h2;
       width: 100%;
-      
-    
-      
+
+
+
     }
-    #primera p{
+
+    #primera p {
       font-size: 0.8em;
       font-weight: 100;
       padding: 1em;
     }
-    .tres{
+
+    .tres {
       grid-area: h3;
-    
+
 
     }
-    .cuatro{
+
+    .cuatro {
       grid-area: h4;
     }
-    .cinco{
+
+    .cinco {
       grid-area: h5;
     }
-    .seis{
+
+    .seis {
       grid-area: h6;
     }
 
@@ -118,194 +124,192 @@
 
     /* EVENTOS */
 
-    #eventos{
-      display:flex;
+    #eventos {
+      display: flex;
       color: black;
       font-size: 1.1em;
     }
 
-    .header-eventos{
+    .header-eventos {
       text-align: center;
       font-size: 4vw;
       display: block;
       background-color: var(--main-color2);
       font-family: 'CMU Typewriter Text', sans-serif;
-      color:black;
+      color: black;
       border-bottom: 1px solid black;
-      
+
     }
 
-    .card-model{
+    .card-model {
       border: 1px solid black;
       width: 33%;
       height: 70vh;
       text-align: center;
-      display:flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 
     }
 
-    .card-model .titulo{
+    .card-model .titulo {
 
       font-size: 1.6em;
 
     }
-    
-    .card-model .imagen{
-      
+
+    .card-model .imagen {
+
       height: 100%;
-      width:100%;      
+      width: 100%;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       background-image: url(./images/retrato-analogico-mujer-hermosa-posando-artisticamente-interiores.jpg);
     }
 
-/* 
+    /* 
     CARRUSEL */
 
-    .carousel-sec{
+    .carousel-sec {
       background-color: var(--main-color2);
 
 
     }
 
     .carousel {
-    margin-left: 15%;
-    margin-right: 15%;
-    
-}
+      margin-left: 15%;
+      margin-right: 15%;
 
-ul.slides {
-    display: block;
-    position: relative;
-    height: 600px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style: none;
-}
+    }
 
-.slides * {
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
+    ul.slides {
+      display: block;
+      position: relative;
+      height: 600px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      list-style: none;
+    }
 
-ul.slides input {
-    display: none; 
-}
+    .slides * {
+      user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
 
-
-.slide-container { 
-    display: block; 
-}
-
-.slide-image {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: 0;
-    transition: all .7s ease-in-out;
-}   
-
-.slide-image img {
-    width: auto;
-    min-width: 100%;
-    height: 100%;
-}
-
-.carousel-controls {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    font-size: 100px;
-    line-height: 600px;
-    color: #fff;
-}
-
-.carousel-controls label {
-    display: none;
-    position: absolute;
-    padding: 0 20px;
-    opacity: 0;
-    transition: opacity .2s;
-    cursor: pointer;
-}
-
-.slide-image:hover + .carousel-controls label{
-    opacity: 0.5;
-}
-
-.carousel-controls label:hover {
-    opacity: 1;
-}
-
-.carousel-controls .prev-slide {
-    width: 49%;
-    text-align: left;
-    left: 0;
-}
-
-.carousel-controls .next-slide {
-    width: 49%;
-    text-align: right;
-    right: 0;
-}
-
-.carousel-dots {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    z-index: 999;
-    text-align: center;
-}
-
-.carousel-dots .carousel-dot {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.5;
-    margin: 10px;
-}
-
-input:checked + .slide-container .slide-image {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 1s ease-in-out;
-}
-
-input:checked + .slide-container .carousel-controls label {
-     display: block; 
-}
-
-input#img-1:checked ~ .carousel-dots label#img-dot-1,
-input#img-2:checked ~ .carousel-dots label#img-dot-2,
-input#img-3:checked ~ .carousel-dots label#img-dot-3,
-input#img-4:checked ~ .carousel-dots label#img-dot-4,
-input#img-5:checked ~ .carousel-dots label#img-dot-5,
-input#img-6:checked ~ .carousel-dots label#img-dot-6 {
-	opacity: 1;
-}
+    ul.slides input {
+      display: none;
+    }
 
 
-input:checked + .slide-container .nav label { display: block; }
+    .slide-container {
+      display: block;
+    }
+
+    .slide-image {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      opacity: 0;
+      transition: all .7s ease-in-out;
+    }
+
+    .slide-image img {
+      width: auto;
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      font-size: 100px;
+      line-height: 600px;
+      color: #fff;
+    }
+
+    .carousel-controls label {
+      display: none;
+      position: absolute;
+      padding: 0 20px;
+      opacity: 0;
+      transition: opacity .2s;
+      cursor: pointer;
+    }
+
+    .slide-image:hover+.carousel-controls label {
+      opacity: 0.5;
+    }
+
+    .carousel-controls label:hover {
+      opacity: 1;
+    }
+
+    .carousel-controls .prev-slide {
+      width: 49%;
+      text-align: left;
+      left: 0;
+    }
+
+    .carousel-controls .next-slide {
+      width: 49%;
+      text-align: right;
+      right: 0;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+      z-index: 999;
+      text-align: center;
+    }
+
+    .carousel-dots .carousel-dot {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0.5;
+      margin: 10px;
+    }
+
+    input:checked+.slide-container .slide-image {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 1s ease-in-out;
+    }
+
+    input:checked+.slide-container .carousel-controls label {
+      display: block;
+    }
+
+    input#img-1:checked~.carousel-dots label#img-dot-1,
+    input#img-2:checked~.carousel-dots label#img-dot-2,
+    input#img-3:checked~.carousel-dots label#img-dot-3,
+    input#img-4:checked~.carousel-dots label#img-dot-4,
+    input#img-5:checked~.carousel-dots label#img-dot-5,
+    input#img-6:checked~.carousel-dots label#img-dot-6 {
+      opacity: 1;
+    }
 
 
-
-
+    input:checked+.slide-container .nav label {
+      display: block;
+    }
   </style>
 </head>
 
@@ -342,10 +346,12 @@ input:checked + .slide-container .nav label { display: block; }
               href="#">Precios</a>
           </li>
         </ul>
-        <button id="navAction"
-          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-          Log in
-        </button>
+        <a href="./login.html">
+          <button id="navAction"
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            Log in
+          </button>
+        </a>
       </div>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -389,28 +395,39 @@ input:checked + .slide-container .nav label { display: block; }
     <div id="primera" class="seccion">
 
       <div class="uno container1"></div>
-      <div class="dos container1"> 
-       <h2>Change the game. Meet new people!</h2> 
-       <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes, brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
-       <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Visit</button>
-       </div>
-       
+      <div class="dos container1">
+        <h2>Change the game. Meet new people!</h2>
+        <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative
+          steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes,
+          brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
+        <button
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Visit</button>
+      </div>
+
       <div class="tres container1">
-        <h2>Make new friends</h2> 
-        <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes, brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
-       
+        <h2>Make new friends</h2>
+        <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative
+          steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes,
+          brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
+
       </div>
       <div class="cuatro container1">
-        <h2>Be the change!</h2> 
-        <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes, brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
+        <h2>Be the change!</h2>
+        <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative
+          steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes,
+          brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
       </div>
       <div class="cinco container1">
-        <h2>Reduce your impact!</h2> 
-        <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes, brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
+        <h2>Reduce your impact!</h2>
+        <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative
+          steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes,
+          brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
       </div>
       <div class="seis container1">
-        <h2>Help your community!</h2> 
-        <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes, brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
+        <h2>Help your community!</h2>
+        <p>There’s a Wiper and True beer for everyone, from the devoted aficionado to those taking their first tentative
+          steps into the glorious, wide world of craft beer. At our Bristol brewery we obsess over creative recipes,
+          brewing with skill and care for balanced, refined and refreshing drinking. That’s Beautiful Beer.</p>
       </div>
     </div>
 
@@ -422,14 +439,14 @@ input:checked + .slide-container .nav label { display: block; }
 
     <!-- Eventos -->
 
-    
+
 
     <div class="header-eventos">Eventos de Hoy</div>
 
 
     <div id="eventos" class="seccion">
 
-      
+
 
       <div class="card-model">
 
@@ -438,7 +455,8 @@ input:checked + .slide-container .nav label { display: block; }
           <h2 class="titulo">Ejemplo titulo</h2>
           <p class="texto">Ejemplo contenido</p>
           <p class="autor">Autor</p>
-          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Join</button>
+          <button
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Join</button>
         </div>
 
       </div>
@@ -471,7 +489,8 @@ input:checked + .slide-container .nav label { display: block; }
           <input type="radio" name="radio-buttons" id="img-2" />
           <li class="slide-container">
             <div class="slide-image">
-              <img src="https://content.r9cdn.net/rimg/dimg/db/02/06b291e8-city-14912-171317ad83a.jpg?width=1750&height=1000&xhint=3040&yhint=2553&crop=true">
+              <img
+                src="https://content.r9cdn.net/rimg/dimg/db/02/06b291e8-city-14912-171317ad83a.jpg?width=1750&height=1000&xhint=3040&yhint=2553&crop=true">
             </div>
             <div class="carousel-controls">
               <label for="img-1" class="prev-slide">
