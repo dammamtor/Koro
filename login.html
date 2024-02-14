@@ -5,57 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/lato');
+        @import url('https://fonts.cdnfonts.com/css/cmu-typewriter-text');
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        :root {
+            --main-color1: #ffa17a;
+            --main-color2: #f6eee2;
+            --main-color3: #005b5f;
+            --main-color4: #1cb0ad;
+
+        }
+
+
+
+        .gradient {
+            background: linear-gradient(270deg, var(--main-color3) 0%, var(--main-color2) 100%);
+        }
+
+        #init {
+            height: 100vh;
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+
 </head>
 
-<body>
-    <div class="container text-center mb-5">
-        <div class="row">
-            <div class="col border border-dark p-3 mb-3">
-                <h2>REGISTRO</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col border border-dark p-3">
-                <p>KORO</p>
-            </div>
-            <div class="col border border-dark p-3">
-                <p>Aqui entraria el menu</p>
-            </div>
-            <div class="col border border-dark p-3">
-                <p>Los botones esos</p>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-2">
-        <h1 class="text-center">LOGIN</h1>
-        <form>
-            <label for="correo" class="form-label">Correo:</label>
-            <input class="form-control mb-3" type="email" id="correo" name="correo" placeholder="Introduce tu correo"
-                required>
+<body class="leading-normal tracking-normal gradient font-sans">
 
-            <label for="clave" class="form-label">Clave:</label>
-            <input class="form-control mb-3" type="password" id="clave" name="clave" placeholder="Introduce tu clave"
-                required>
 
-            <p><a class="link-opacity-100" href="#">¿Olvidaste tu contraseña?</a></p>
-            <div class="col-auto d-flex justify-content-center">
-                <button type="button" class="btn btn-primary mb-3 btn-dark">Entrar</button>
-            </div>
-            <div class="col-auto d-flex justify-content-center">
-                <a href="otra_pagina.html">
-                    <button type="button" class="btn btn-primary mb-3 btn-light">Crear cuenta</button>
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+            <div class="pl-4 flex items-center">
+
+                <svg width="40" height="40" viewBox="0 0 20 100">
+                    <polygon points="0,50 100,0 100,100" fill="white" />
+                </svg>
+                <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                    href="index.html"> Koro
                 </a>
             </div>
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
 
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-center flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Reviews</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-slate-800 hover:text-underline py-2 px-4"
+                            href="#">Eventos</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-slate-800 hover:text-underline py-2 px-4"
+                            href="#">Precios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+
+
+    <div class="max-w-md mx-auto mt-32 p-8 bg-white rounded-md shadow-md">
+        <h1 class="text-2xl font-bold mb-4 ">LOGIN</h1>
+        <form>
+            <label for="correo" class="block text-sm font-semibold mb-1">Correo:</label>
+            <input type="email" id="correo" name="correo" placeholder="Introduce tu correo" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4">
+
+            <label for="clave" class="block text-sm font-semibold mb-1">Clave:</label>
+            <input type="password" id="clave" name="clave" placeholder="Introduce tu clave" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4">
+
+            <p class="text-sm"><a href="#" class="text-blue-500">¿Olvidaste tu contraseña?</a></p>
+            <div class="mb-4">
+                <button type="button"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition">Entrar</button>
+            </div>
+            <div>
+                <a href="otra_pagina.html">
+                    <button type="button"
+                        class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition">Crear
+                        cuenta</button>
+                </a>
+            </div>
         </form>
     </div>
-
 </body>
 
 </html>
