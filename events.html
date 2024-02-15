@@ -64,10 +64,47 @@
 
 
     </div>
+    
+
+        <!-- LISTA EVENTOS -->
+    <div id="eventos" class="seccion">
+
+
+
+      <div class="card-model">
+
+        <div class="imagen"></div>
+        <div class="contenido">
+          <h2 class="titulo">Ejemplo titulo</h2>
+          <p class="texto">Ejemplo contenido</p>
+          <p class="autor">Autor</p>
+          <button
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Join</button>
+        </div>
+
+      </div>
+
+
+    </div>
+
 </body>
 
 
+<script src="js/main.js"></script>
+<script src="js/bbEventos.js"></script>
+<script>
 
+    {
+      var divContenedor = document.getElementById("eventos")
+      var divEvento = document.getElementsByClassName("card-model")[0]
+      var eventosJson = returnNumber(6)
+      console.log(divContenedor)
+      console.log(divEvento)
+      console.log(eventosJson)
+      divContenedor.innerHTML = ''
+      divContenedor = loadEventsIndex(divContenedor, divEvento, eventosJson)
+    }
+</script>
 
 
 
