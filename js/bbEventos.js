@@ -96,17 +96,6 @@ var BB = [
         location: generateRandomLocation("Sevilla")
     },
     {
-        event: "Partido de Exhibición Betis vs. Invitados",
-        creator: "Real Betis",
-        official: true,
-        description: "Únete a nosotros para un emocionante partido de exhibición donde jugadores del Real Betis se enfrentarán a invitados sorpresa. ¡Una experiencia futbolística única para los amantes del fútbol!",
-        image: "betis_partido.jpg",
-        labels: ["deporte", "fútbol"],
-        price: 25,
-        city: "Sevilla",
-        location: generateRandomLocation("Sevilla")
-    },
-    {
         event: "Picnic en el Parque",
         creator: "Amigos del Aire Libre",
         official: false,
@@ -209,17 +198,6 @@ var BB = [
         location: generateRandomLocation("Madrid")
     },
     {
-        event: "Festival de Ofertas Aliexpress",
-        creator: "Aliexpress España",
-        official: true,
-        description: "¡Únete a nosotros en el emocionante Festival de Ofertas de Aliexpress! Descubre increíbles descuentos, promociones exclusivas y productos de alta calidad a precios imbatibles. No te pierdas esta oportunidad de ahorro y diversión de compras en línea.",
-        image: "aliexpress_ofertas_festival.jpg",
-        labels: ["compras", "ofertas", "tecnología"],
-        price: 0,
-        city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
-    },
-    {
         event: "Quedada de Ajedrez en el Parque",
         creator: "ChessEnthusiast" + Math.floor(Math.random() * 1000),
         official: false,
@@ -273,17 +251,6 @@ var BB = [
         price: 50,
         city: "Madrid",
         location: generateRandomLocation("Madrid")
-    },
-    {
-        event: "Encuentro Anti-Koro",
-        creator: "AntiKoroHater" + Math.floor(Math.random() * 1000),
-        official: false,
-        description: "¡Únete a nuestra reunión de haters de Koro! Compartiremos nuestras críticas y experiencias negativas con la aplicación. Si no eres fan de Koro, este evento es para ti. Ven y comparte tus frustraciones en un ambiente amigable.",
-        image: "anti_koro_encuentro.jpg",
-        labels: ["críticas", "opiniones", "humor"],
-        price: 0,
-        city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
     },
     {
         event: "Escape Room Challenge",
@@ -390,7 +357,29 @@ var BB = [
         price: 15,
         city: "Sevilla",
         location: generateRandomLocation("Sevilla")
-    }
+    },
+    {
+        event: "Festival de Ofertas Aliexpress",
+        creator: "Aliexpress España",
+        official: true,
+        description: "¡Únete a nosotros en el emocionante Festival de Ofertas de Aliexpress! Descubre increíbles descuentos, promociones exclusivas y productos de alta calidad a precios imbatibles. No te pierdas esta oportunidad de ahorro y diversión de compras en línea.",
+        image: "aliexpress_ofertas_festival.jpg",
+        labels: ["compras", "ofertas", "tecnología"],
+        price: 0,
+        city: "Barcelona",
+        location: generateRandomLocation("Barcelona")
+    },
+    {
+        event: "Encuentro Anti-Koro",
+        creator: "AntiKoroHater" + Math.floor(Math.random() * 1000),
+        official: false,
+        description: "¡Únete a nuestra reunión de haters de Koro! Compartiremos nuestras críticas y experiencias negativas con la aplicación. Si no eres fan de Koro, este evento es para ti. Ven y comparte tus frustraciones en un ambiente amigable.",
+        image: "anti_koro_encuentro.jpg",
+        labels: ["críticas", "opiniones", "humor"],
+        price: 0,
+        city: "Barcelona",
+        location: generateRandomLocation("Barcelona")
+    },
 ];
 
 
