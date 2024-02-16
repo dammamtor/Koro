@@ -67,8 +67,8 @@
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
   </nav>
   <!--MAIN-->
-  <div class="pt-20 h-full">
-    <div id="init" class="container  mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center ">
+  <div class="pt-20" id="koro-header">
+    <div id="init" class="container mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center ">
       <!--Left Col-->
       <div class="flex flex-col w-full md:w-2/5 justify-between items-start text-center md:text-center  pb-48 pr-28 ">
 
@@ -147,6 +147,86 @@
 
 
 
+    
+       <!-- SECCION DE CARRUSEL DE IMG -->
+       <div class="carousel-sec">
+        <div class="carousel">
+          <ul class="slides">
+            <input type="radio" name="radio-buttons" id="img-1" checked />
+            <li class="slide-container">
+              <div class="slide-image">
+                <p class="texto">
+                  <span class="cabecera">Concierto de Jazz en el Parque</span> <br><br> Asistir al concierto de jazz en el parque fue una experiencia encantadora. La música en vivo creó una atmósfera relajante y acogedora que atrajo a personas de todas las edades. Los músicos demostraron un talento excepcional y su pasión por el jazz se reflejaba en cada nota. Además, el ambiente al aire libre y la brisa suave añadieron un toque especial a la noche. Definitivamente, recomendaría este evento a cualquier amante de la música en busca de una experiencia única y memorable.
+                  <span>Autor: Huelebragas34</span>
+                </p>
+                <img src="./images/pexels-abby-kihano-431722.jpg">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-3" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-2" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-2" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <p class="texto">
+                  <span class="cabecera">Fiesta de Nochevieja en el Club X</span> <br><br> ¡La fiesta de Nochevieja en el Club X fue una explosión total para despedir el año! Desde el momento en que entré, la energía era contagiosa, con luces brillantes y música vibrante que te hacían querer bailar toda la noche. Los DJs mantuvieron la pista de baile llena con una mezcla perfecta de éxitos del momento y clásicos atemporales. 
+
+                  
+                  <span>Autor: FelipitoRobasillas</span>
+                </p>
+                <img
+                  src="./images/pexels-alex-andrews-1983046.jpg">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-1" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-3" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-3" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <p class="texto">
+                  <span class="cabecera">Avant Premiere de "El Despertar de la Fuerza"</span> <br><br> Asistir a la avant premiere de "El Despertar de la Fuerza" fue una experiencia verdaderamente emocionante y épica para cualquier fanático de Star Wars. Desde el momento en que llegamos al cine, el ambiente estaba cargado de anticipación y entusiasmo palpable. La decoración temática y los cosplayers que se paseaban por el vestíbulo crearon un ambiente verdaderamente inmersivo.
+                  <span>Autor: Huelebragas34</span>
+
+                  
+                </p>
+                
+                <img src="./images/pexels-luis-quintero-2774556.jpg">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-2" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-1" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <div class="carousel-dots">
+              <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+              <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+              <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+
+
     <!-- Eventos -->
 
 
@@ -186,8 +266,11 @@
 
     <div class="parallax">
 
-    <h1 class="titulo">Nuestros usuarios <br>destacados 🌟</h1>
-    
+
+    <div class="descripcion">
+    <h1 class="titulo">Nuestros usuarios destacados</h1>
+    <p class="contenido">En esta sección, celebramos a aquellos miembros de nuestra comunidad cuyo compromiso, creatividad y contribuciones han dejado una marca indeleble en nuestra plataforma. </p>
+   </div>
 
     <img src="./images/retrato-analogico-mujer-hermosa-posando-artisticamente-interiores.jpg" alt="the back of random person">
     <img src="./images/vista-frontal-mujer-sonriente-fuegos-artificiales.jpg" alt="an eagle" style="--f:.12;--r:5px">
@@ -197,61 +280,6 @@
     </div>
 
 
-       <!-- SECCION DE CARRUSEL DE IMG -->
-       <div class="carousel-sec">
-        <div class="carousel">
-          <ul class="slides">
-            <input type="radio" name="radio-buttons" id="img-1" checked />
-            <li class="slide-container">
-              <div class="slide-image">
-                <img src="./images/pexels-abby-kihano-431722.jpg">
-              </div>
-              <div class="carousel-controls">
-                <label for="img-3" class="prev-slide">
-                  <span>&lsaquo;</span>
-                </label>
-                <label for="img-2" class="next-slide">
-                  <span>&rsaquo;</span>
-                </label>
-              </div>
-            </li>
-            <input type="radio" name="radio-buttons" id="img-2" />
-            <li class="slide-container">
-              <div class="slide-image">
-                <img
-                  src="./images/pexels-alex-andrews-1983046.jpg">
-              </div>
-              <div class="carousel-controls">
-                <label for="img-1" class="prev-slide">
-                  <span>&lsaquo;</span>
-                </label>
-                <label for="img-3" class="next-slide">
-                  <span>&rsaquo;</span>
-                </label>
-              </div>
-            </li>
-            <input type="radio" name="radio-buttons" id="img-3" />
-            <li class="slide-container">
-              <div class="slide-image">
-                <img src="./images/pexels-luis-quintero-2774556.jpg">
-              </div>
-              <div class="carousel-controls">
-                <label for="img-2" class="prev-slide">
-                  <span>&lsaquo;</span>
-                </label>
-                <label for="img-1" class="next-slide">
-                  <span>&rsaquo;</span>
-                </label>
-              </div>
-            </li>
-            <div class="carousel-dots">
-              <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-              <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-              <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-            </div>
-          </ul>
-        </div>
-      </div>
 
 
 
