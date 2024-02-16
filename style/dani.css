@@ -1,0 +1,91 @@
+@import url('https://fonts.cdnfonts.com/css/lato');
+@import url('https://fonts.cdnfonts.com/css/cmu-typewriter-text');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+:root {
+    --main-color1: #ffa17a;
+    --main-color2: #f6eee2;
+    --main-color3: #005b5f;
+    --main-color4: #1cb0ad;
+
+}
+
+
+
+.gradient {
+    background: linear-gradient(270deg, var(--main-color3) 0%, var(--main-color2) 100%);
+}
+
+
+/* SECCIONES */
+
+.seccion {
+    width: 100%;
+
+    background-color: var(--main-color2);
+
+}
+
+/* EVENTOS */
+
+#eventos {
+    display: flex;
+    color: black;
+    font-size: 1.1em;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.header-eventos {
+    text-align: center;
+    font-size: 4vw;
+    display: block;
+    background-color: var(--main-color2);
+    font-family: 'CMU Typewriter Text', sans-serif;
+    color: black;
+    border-bottom: 1px solid black;
+
+}
+
+.card-model {
+    border: 1px solid black;
+    width: 33%;
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-model .titulo {
+
+    font-size: 1.6em;
+
+}
+
+.card-model .imagen {
+
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    margin-top: auto;
+    /* Esto empujará el pie de página hacia abajo */
+}
