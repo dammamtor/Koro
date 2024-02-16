@@ -393,3 +393,12 @@ function returnNumber(total) {
     }
     return result;
 }
+function returnByCity(city){
+    var result = new Array();
+    for(let i of BB){
+        if(i.city==city)
+            result.push(i)
+    }
+    return result;
+
+}

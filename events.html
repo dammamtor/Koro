@@ -32,11 +32,13 @@
 
 
                 <select
+                    id="citySelector"
                     class="py-3 px-4 ml-9 pe-9 block w-52 border-gray-200 rounded-full text-sm focus:border-black-500 focus:ring-black-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-black-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
-                    <option selected>Selecciona ciudad</option>
-                    <option>Sevilla</option>
-                    <option>Madrid</option>
-                    <option>Barcelona</option>
+                    <option selected disabled>Selecciona ciudad</option>
+                    <option value="Sevilla">Sevilla</option>
+                    <option value="Madrid">Madrid</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Valencia">Valencia</option>
                 </select>
 
 
@@ -93,16 +95,24 @@
 <script src="js/main.js"></script>
 <script src="js/bbEventos.js"></script>
 <script>
-    var eventosJson = null
+    var eventosJsonTotal
+    var eventosJsonActual;
     {
       var divContenedor = document.getElementById("eventos")
       var divEvento = document.getElementsByClassName("card-model")[0]
-      eventosJson = returnAll()
-      console.log(divContenedor)
-      console.log(divEvento)
-      console.log(eventosJson)
-      divContenedor.innerHTML = ''
-      divContenedor = loadEventsIndex(divContenedor, divEvento, eventosJson)
+      eventosJsonTotal = returnAll()
+      eventosJsonActual = eventosJsonTotal
+    //   console.log(divContenedor)
+    //   console.log(divEvento)
+    //   console.log(eventosJsonTo)
+      divContenedor.innerHTML=''
+      divContenedor = loadEventsIndex(divContenedor, divEvento, eventosJsonActual)
+    }
+    document.getElementById("citySelector").onchange = function(){
+      var city = document.getElementById("citySelector").value
+      eventosJsonActual = returnByCity(city)
+      divContenedor.innerHTML=''
+      divContenedor = loadEventsIndex(divContenedor, divEvento, eventosJsonActual)
     }
 </script>
 

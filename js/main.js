@@ -9,7 +9,7 @@ function loadEventsIndex(divContenedor, divRepetir, eventos){
         repetido.querySelector('.imagen').style.backgroundImage = "url("+e.image+")"
         repetido.querySelector('.titulo').innerText = e.event
         if(e.official){
-            repetido.querySelector('.titulo').innerHTML+= '<img src="images/check.png" style="height: 20px"></img>'
+            repetido.querySelector('.titulo').innerHTML+= '<img src="images/check.png" style="height: 20px; display:inline-block; margin-left: 5px"></img>'
         }
         for(let i = 0; i<35;i++){
             descField+=e.description[i]
