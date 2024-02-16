@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koro Eventos</title>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
-    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body style="background: #000000">
@@ -97,7 +97,7 @@
     {
       var divContenedor = document.getElementById("eventos")
       var divEvento = document.getElementsByClassName("card-model")[0]
-      var eventosJson = returnNumber(6)
+      var eventosJson = returnAll()
       console.log(divContenedor)
       console.log(divEvento)
       console.log(eventosJson)
