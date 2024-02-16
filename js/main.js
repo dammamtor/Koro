@@ -7,7 +7,6 @@ function loadEventsIndex(divContenedor, divRepetir, eventos){
         descField = ""
         repetido = divRepetir.cloneNode(true)
         repetido.querySelector('.imagen').style.backgroundImage = "url("+e.image+")"
-        num++
         repetido.querySelector('.titulo').innerText = e.event
         if(e.official){
             repetido.querySelector('.titulo').innerHTML+= '<img src="images/check.png" style="height: 20px"></img>'
@@ -18,6 +17,8 @@ function loadEventsIndex(divContenedor, divRepetir, eventos){
         descField+="..."
         repetido.querySelector('.texto').innerText = descField
         repetido.querySelector('.autor').innerText = e.creator
+        repetido.getElementsByTagName("button")[0].innerHTML = '<a href="evento.html?pos='+num.toString()+'">Join</a>'
+        num++
         divContenedor.appendChild(repetido)
         console.log(repetido)
     }
