@@ -26,6 +26,11 @@
 
 /* SECCIONES */
 
+
+#koro-header{
+  height: 120vh;
+}
+
 .seccion {
   width: 100%;
 
@@ -131,24 +136,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  
 
 }
 
 .card-model .titulo {
-
+  
+  margin-top: 1.5vh;
   font-size: 1.6em;
 
 }
 
 .card-model .imagen {
 
-  height: 100%;
+  height: 40vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-image: url(./images/retrato-analogico-mujer-hermosa-posando-artisticamente-interiores.jpg);
+  
+  
 }
 
 /* 
@@ -204,6 +213,30 @@ ul.slides input {
   top: 0;
   opacity: 0;
   transition: all .7s ease-in-out;
+}
+
+.slide-image .texto{
+  color: rgba(245, 245, 245, 0.815);
+  font-size: 1vw;
+  position:absolute;
+  margin-left: 3vw;
+  margin-top: 2vw;
+  width: 30vw;
+  background-color:#ffffff27;
+  border-radius: 3%;
+  padding: 2vw;
+  font-style: italic;
+ 
+}
+
+.slide-image .texto .cabecera{
+  color: rgba(245, 245, 245, 0.815);
+  font-size: 1.1vw;
+  text-decoration: underline;
+  font-style: normal;
+
+
+ 
 }
 
 .slide-image img {
@@ -331,6 +364,7 @@ input:checked+.slide-container .nav label {
   }
   
   .parallax {
+    font-family: 'CMU Typewriter Text', sans-serif;
     margin: 0;
     min-height: 70vh;
     display: grid;
@@ -340,10 +374,32 @@ input:checked+.slide-container .nav label {
     background: var(--main-color3);
   }
 
+  .parallax .descripcion{
+
+    display: flex;
+    flex-direction: column;
+
+  }
+
   .parallax .titulo{
     color: white;
     font-size: 4vh;
     text-align: center;
     font-weight: 900;   
     margin: auto;
+    margin-right: 5vw;
+    padding:0;
+    
+  }
+
+  .parallax .contenido{
+    color: white;
+    font-size: 2vh;
+    text-align: center;
+    font-weight: 500;   
+    margin: auto;
+    margin-right: 5vw;
+    display: block;
+    width: 30vw;
+    font-style: italic;
   }
