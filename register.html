@@ -26,12 +26,18 @@
             height: 100vh;
         }
 
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
         footer {
             margin-top: auto;
-            background-color: #ffffff;
-            /* You can customize the background color here */
-            padding: 20px;
-            margin-top: 20px;
         }
     </style>
 
@@ -77,7 +83,7 @@
     </nav>
 
 
-    <div class="max-w-md mx-auto mt-32 p-8 bg-white rounded-md shadow-md">
+    <div class="max-w-md mx-auto mt-32 p-8 bg-white rounded-md shadow-md w-full">
         <h1 class="text-2xl font-bold mb-4 ">REGISTRO</h1>
         <form class="w-full max-w-sm">
             <div class="mb-4">
