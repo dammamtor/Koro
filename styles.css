@@ -6,11 +6,15 @@
   --main-color2: #f6eee2;
   --main-color3: #005b5f;
   --main-color4: #1cb0ad;
-
+  --main-color5: hsla(183, 100%, 19%, 0);
 }
 
 
-
+nav{
+  background-color: var(--main-color5);
+  
+  
+}
 .gradient {
   background: linear-gradient(270deg, var(--main-color3) 0%, var(--main-color2) 100%);
 }
