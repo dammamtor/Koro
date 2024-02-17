@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koro Eventos</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="../style/dani.css">
+</head>
+
+<body style="background: #000000">
+  <!--NAV-->
+  <nav id="header" class="fixed w-full z-30 top-0 text-black" style="background: #000000">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+      <div class="pl-4 flex items-center">
+        <svg width="40" height="40" viewBox="0 0 20 100">
+          <polygon points="0,50 100,0 100,100" fill="white" />
+        </svg>
+        <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#"> Koro
+        </a>
+      </div>
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle"
+          class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          <!-- Add your menu toggle icon here -->
+        </button>
+      </div>
+
+      <div class="hidden lg:flex lg:items-center lg:w-auto lg:justify-end">
+        <div class="text-md lg:flex-grow">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">Home</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-gray-600 no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#">About</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-gray-600 no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#">Services</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-gray-600 no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="relative mt-1 lg:mt-0">
+          <input class="bg-gray-800 text-white rounded-full focus:outline-none focus:shadow-outline w-32 px-4 py-2"
+            type="text" placeholder="Search...">
+        </div>
+        <div class="flex items-center">
+          <img class="h-8 w-8 rounded-full object-cover mx-4" src="https://placekitten.com/40/40" alt="User Avatar">
+        </div>
+      </div>
+    </div>
+    <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+  </nav>
+
+  <!-- LISTA EVENTOS -->
+  <div id="eventos" class="seccion">
+
+    <!-- Juego al estilo DOOM -->
+    <div class="card-model">
+      <div class="imagen" style="background-image: url(images/doom-image.jpg);"></div>
+      <div class="contenido">
+        <h2 class="titulo">DOOM: La Batalla Infernal</h2>
+        <p class="texto">Enfréntate a hordas de demonios en este shooter frenético.</p>
+        <p class="autor">Desarrollador: ID Software</p>
+        <a href="doom-checkboxes-main/index.html">
+          <button
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out btn btn-black">Jugar
+            ahora</button>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Juego al estilo Mario Bros -->
+    <div class="card-model">
+      <div class="imagen" style="background-image: url(images/mario.jpg);"></div>
+      <div class="contenido">
+        <h2 class="titulo">Aventuras de Mario</h2>
+        <p class="texto">Ayuda a Mario a rescatar a la princesa de las garras de Bowser.</p>
+        <p class="autor">Desarrollador: Nintendo</p>
+        <button
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out btn btn-black">Jugar
+          ahora</button>
+      </div>
+    </div>
+
+    <!-- Juego al estilo Sonic -->
+    <div class="card-model">
+      <div class="imagen" style="background-image: url(images/sonic.jpg);"></div>
+      <div class="contenido">
+        <h2 class="titulo">Sonic: Velocidad Supersonica</h2>
+        <p class="texto">Corre a través de mundos coloridos y derrota al malvado Dr. Robotnik.</p>
+        <p class="autor">Desarrollador: SEGA</p>
+        <button
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out btn btn-black">Jugar
+          ahora</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!--Footer-->
+  <footer class="bg-white">
+    <div class="container mx-auto px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <svg width="40" height="40" viewBox="0 0 20 100">
+          <polygon points="0,50 100,0 100,100" fill="black" />
+        </svg>
+        <div class="flex-1 mb-6 text-black">
+
+
+          <a class="text-black-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+
+            Koro
+          </a>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Links</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Social</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Company</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+
+</html>
