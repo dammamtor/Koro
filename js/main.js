@@ -20,7 +20,7 @@ function loadEventsIndex(divContenedor, divRepetir, eventos){
         repetido.getElementsByTagName("button")[0].innerHTML = '<a href="evento.html?pos='+num.toString()+'">Join</a>'
         num++
         divContenedor.appendChild(repetido)
-        console.log(repetido)
+        //console.log(repetido)
     }
     console.log(divContenedor)
     return divContenedor;

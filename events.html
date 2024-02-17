@@ -34,18 +34,22 @@
                 <select
                     id="citySelector"
                     class="py-3 px-4 ml-9 pe-9 block w-52 border-gray-200 rounded-full text-sm focus:border-black-500 focus:ring-black-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-black-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
-                    <option selected disabled>Selecciona ciudad</option>
+                    <option selected disabled value="">Selecciona ciudad</option>
                     <option value="Sevilla">Sevilla</option>
                     <option value="Madrid">Madrid</option>
                     <option value="Barcelona">Barcelona</option>
                     <option value="Valencia">Valencia</option>
                 </select>
 
-
                 <button id="navAction"
                     class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     Log in
                 </button>
+                <!-- BOTÓN TEMPORAL -->
+                <a href="index.html" style="color: white;">Pa casa</a>
+                <!-- Barra de Busqueda temporal -->
+                <input type="text" name="barra_busqueda" id="barra_busqueda" value="">
+                
             </div>
         </div>
         <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -97,22 +101,27 @@
 <script>
     var eventosJsonTotal
     var eventosJsonActual;
-    {
-      var divContenedor = document.getElementById("eventos")
-      var divEvento = document.getElementsByClassName("card-model")[0]
-      eventosJsonTotal = returnAll()
-      eventosJsonActual = eventosJsonTotal
-    //   console.log(divContenedor)
-    //   console.log(divEvento)
-    //   console.log(eventosJsonTo)
-      divContenedor.innerHTML=''
-      divContenedor = loadEventsIndex(divContenedor, divEvento, eventosJsonActual)
+    var divContenedor;
+    var divEvento
+    function filterEvent(){
+        var city = document.getElementById("citySelector").value
+        var search = document.getElementById("barra_busqueda").value
+        eventosJsonActual = returnBySearch(search, city)
+        divContenedor.innerHTML=''
+        divContenedor = loadEventsIndex(divContenedor, divEvento, eventosJsonActual)
+
     }
-    document.getElementById("citySelector").onchange = function(){
-      var city = document.getElementById("citySelector").value
-      eventosJsonActual = returnByCity(city)
-      divContenedor.innerHTML=''
-      divContenedor = loadEventsIndex(divContenedor, divEvento, eventosJsonActual)
+    window.onload= function(){
+        {
+        divContenedor = document.getElementById("eventos")
+        divEvento = document.getElementsByClassName("card-model")[0]
+        eventosJsonTotal = returnAll()
+        eventosJsonActual = eventosJsonTotal
+        divContenedor.innerHTML=''
+        divContenedor = loadEventsIndex(divContenedor, divEvento, eventosJsonActual)
+        }
+        document.getElementById("citySelector").onchange = filterEvent
+        document.getElementById("barra_busqueda").oninput = filterEvent
     }
 </script>
 

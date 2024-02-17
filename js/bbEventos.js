@@ -402,3 +402,23 @@ function returnByCity(city){
     return result;
 
 }
+function returnBySearch(search, city){
+    var result = new Array()
+    var labels;
+    for(let i of BB){
+        labels=""
+        for(let j of i.labels){
+            labels+=j+" "
+        }
+        if(i.description.toUpperCase().includes(search.toUpperCase())||i.event.toUpperCase().includes(search.toUpperCase())||i.creator.toUpperCase().toUpperCase().includes(search.toUpperCase())||labels.toUpperCase().includes(search.toUpperCase())){
+            if(city==""){
+                result.push(i)
+            }else{
+                if(i.city==city){
+                    result.push(i)
+                }
+            }
+        }
+    }
+    return result;
+}
