@@ -1,91 +1,114 @@
 @import url('https://fonts.cdnfonts.com/css/lato');
 @import url('https://fonts.cdnfonts.com/css/cmu-typewriter-text');
 
-html,
+/* Importa los estilos de Tailwind CSS */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* Estilo general */
 body {
-    height: 100%;
-    margin: 0;
+    background-color: var(--main-color1); /* Cambia el fondo del body a un tono más claro */
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-:root {
-    --main-color1: #ffa17a;
-    --main-color2: #f6eee2;
-    --main-color3: #005b5f;
-    --main-color4: #1cb0ad;
-
-}
-
-
-
-.gradient {
-    background: linear-gradient(270deg, var(--main-color3) 0%, var(--main-color2) 100%);
-}
-
-
-/* SECCIONES */
-
+/* Sección general */
 .seccion {
-    width: 100%;
-
-    background-color: var(--main-color2);
-
+    background-color: var(--main-color4); /* Utiliza un color más oscuro para destacar las secciones */
+    color: white;
+    padding: 40px; /* Añade espacio interno para mejorar el diseño */
+    border-radius: 10px; /* Agrega bordes redondeados */
 }
 
-/* EVENTOS */
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-color3); /* Utiliza un color llamativo para los títulos */
+}
 
+/* Eventos */
 #eventos {
-    display: flex;
-    color: black;
     font-size: 1.1em;
-    flex-wrap: wrap;
-    flex-grow: 1;
+    color : white;
 }
 
 .header-eventos {
-    text-align: center;
     font-size: 4vw;
-    display: block;
-    background-color: var(--main-color2);
     font-family: 'CMU Typewriter Text', sans-serif;
-    color: black;
-    border-bottom: 1px solid black;
-
+    border-bottom: 2px solid var(--main-color3); /* Utiliza un borde más grueso y con el color llamativo */
+    padding-bottom: 10px; /* Añade espacio en la parte inferior del encabezado */
 }
 
+/* Tarjeta de juego al estilo DOOM mejorada */
+.game-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.game-image {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Añade para ocultar el exceso de la imagen */
+    transition: transform 0.3s ease-in-out; /* Añade una transición suave */
+}
+
+/* Añade un efecto de escala al pasar el mouse */
+.game-image:hover {
+    transform: scale(1.1);
+}
+
+
 .card-model {
-    border: 1px solid black;
-    width: 33%;
+    border: 2px solid var(--main-color3); /* Bordes más gruesos y con el color llamativo */
     height: 70vh;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Agrega una sombra más pronunciada */
 }
 
 .card-model .titulo {
-
-    font-size: 1.6em;
-
+    font-size: 1.8em; /* Aumenta el tamaño del texto del título */
+    margin-bottom: 10px; /* Añade espacio en la parte inferior del título */
 }
 
 .card-model .imagen {
-
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border-radius: 10px; /* Agrega bordes redondeados a la imagen */
 }
 
+/* Botón de jugar */
+.btn-jugar {
+    background-color: var(--main-color3);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-jugar:hover {
+    background-color: var(--main-color4);
+    transform: scale(1.05);
+}
+
+/* Pie de página */
 footer {
     margin-top: auto;
-    /* Esto empujará el pie de página hacia abajo */
+    background-color: var(--main-color4);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid var(--main-color3);
 }
