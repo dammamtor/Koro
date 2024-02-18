@@ -380,6 +380,18 @@ var BB = [
         city: "Barcelona",
         location: generateRandomLocation("Barcelona")
     },
+    {
+        event: "Travesía Onírica: Ritos en la Noche Estrellada",
+        creator: "VisionarioDelSueño" + Math.floor(Math.random() * 1000),
+        official: false,
+        description: "Adéntrate en una travesía onírica durante los Ritos en la Noche Estrellada. Este evento te sumergirá en un universo de sueños y realidad, explorando los límites de la conciencia. Vive una experiencia única bajo el manto estrellado de Madrid.",
+        image: "images/imagesEvents/32.jpg",
+        labels: ["onirismo", "experiencia", "Madrid"],
+        price: 20,
+        city: "Madrid",
+        location: generateRandomLocation("Madrid")
+    }
+    
 ];
 
 
