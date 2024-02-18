@@ -11,66 +11,112 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DOOM via Checkboxes</title>
+    <title>DOOM</title>
     <meta name="description" content="WebAssembly meets 16000 HTML checkboxes.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <style>
         * {
-            font-family: sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
-        
+
         body {
-            padding: 5px;
+            background-color: #0f0f0f;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
-        
+
         #hide {
             display: none;
         }
-        
-        #checkboxes {
-            zoom: 0.4;
-            pointer-events: none;
-        }
-        
+
         video {
-            zoom: 2;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #checkboxes {
+            visibility: hidden;
+            width: 1vw;
         }
     </style>
 </head>
 
-<body>
-    <p>
-        DOOM via checkboxes. <b>Desktop Chrome/Edge only</b>. By <a href="https://twitter.com/healeycodes">@healeycodes</a>. Read the blog post: <a href="https://healeycodes.com/doom-rendered-via-checkboxes">DOOM Rendered via Checkboxes</a>.
-    </p>
+<body
+    class="bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-white h-screen flex flex-col items-center justify-center">
+    <h1 class="text-3xl font-bold mb-4">DOOM</h1>
     <div id="hide">
         <p id="focushint"></p>
         <div class="container" style="display: none">
-            <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should render.</canvas>
+            <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should
+                render.</canvas>
             <span>&nbsp;</span>
             <div id="output"></div>
         </div>
-        gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span id="getms_stats">0</span><br /> DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br
-        /> Browser Animation FPS: <span id="animationfps_stats">0</span> (target: around 60FPS, depending on browser)<br />
+        gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span
+            id="getms_stats">0</span><br /> DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn:
+        <span id="drawframes_stats">0</span><br /> Browser Animation FPS: <span id="animationfps_stats">0</span>
+        (target: around 60FPS, depending on browser)<br />
     </div>
-    <ul>
-        <li>Use <button id="enterButton">&#x23CE;</button> to start the game</li>
-        <li>arrow keys <button id="leftButton">&#x2190;</button>
+    <ul class="text-lg mb-8">
+        <li>Utiliza <button id="enterButton">&#x23CE;</button> para comenzar el juego</li>
+        <li>Teclas de flecha <button id="leftButton">&#x2190;</button>
             <button id="upButton">&#x2191;</button>
             <button id="downButton">&#x2193;</button>
-            <button id="rightButton">&#x2192;</button> to move
-            <button id="ctrlButton">ctrl</button> to shoot
+            <button id="rightButton">&#x2192;</button> para moverte
+            <button id="ctrlButton">ctrl</button> para disparar
         </li>
-
-        <li>spacebar <button id="spaceButton">&nbsp;&nbsp;&nbsp;&nbsp;</button> to open gates
-        </li>
-        <li><button id="altButton">alt</button> and arrow keys to strafe (if your browser does not handle these keys otherwise).
-        </li>
+        <li>Barra espaciadora <button id="spaceButton">&nbsp;&nbsp;&nbsp;&nbsp;</button> para abrir puertas</li>
+        <li><button id="altButton">alt</button> y teclas de flecha para esquivar (si tu navegador no maneja estas teclas
+            de otra manera).</li>
     </ul>
-    </div>
-    <video id="doom-video" width="160" height="100"></video>
+    <video id="doom-video" width="900vw"></video>
     <div id="checkboxes"></div>
-    <p>Credits: DOOM via <a href="https://github.com/diekmann/wasm-fizzbuzz">WebAssembly from Scratch Article</a>, Checkbox library via <a href="https://www.bryanbraun.com/checkboxland/">Checkboxland</a>.
+    <p class="text-lg">Credits: DOOM via <a href="https://github.com/diekmann/wasm-fizzbuzz"
+            class="underline">WebAssembly from Scratch Article</a>, Develop by <a
+            href="https://www.bryanbraun.com/checkboxland/" class="underline">Koro Games</a>.
+    </p>
 </body>
 
 <script type="module" src="glue.js"></script>
