@@ -7,6 +7,7 @@
     <title>Koro Eventos</title>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
 <body style="background: #000000">
@@ -41,14 +42,27 @@
                     <option value="Valencia">Valencia</option>
                 </select>
 
+                <input type="search" required>
+                <i class="fa fa-search"></i>
+
+                <form action="">
+                  <input name="barra_busqueda" id="barra_busqueda" type="search" required placeholder="Filtrar búsqueda">
+                  <i class="fa fa-search"></i>
+                  
+                 
+                </form> 
+
+               
+
+               
+
+
+
                 <button id="navAction"
                     class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     Log in
                 </button>
-                <!-- BOTÓN TEMPORAL -->
-                <a href="index.html" style="color: white;">Pa casa</a>
-                <!-- Barra de Busqueda temporal -->
-                <input type="text" name="barra_busqueda" id="barra_busqueda" value="">
+
                 
             </div>
         </div>
@@ -57,19 +71,7 @@
 
 
 
-    <div class="w-full max-w-3xl">
-
-        <input type="text" id="search" placeholder="Enter your search here"
-            class="border-0 focus:ring-0 focus:outline-0 w-[60%] bg-slate-600 rounded-l-lg pl-4 text-sm text-slate-200">
-        <button
-            class="ring-4 ring-slate-600 ring-offset-[0.55rem] shadow-transparent ring-offset-slate-800 hover:ring-offset-rose-500  hover:bg-rose-500 bg-transparent rounded-[50%] active:scale-95 cursor-pointer">
-            <h2
-                class="rounded-full border-4 border-rose-500 w-16 h-16  text-rose-500 text-2xl text-center justify-center flex items-center font-semibold hover:border-slate-600 hover:text-slate-600">
-                GO</h2>
-        <!-- </button> -->
-
-
-    </div>
+   
     
 
         <!-- LISTA EVENTOS -->
@@ -93,7 +95,81 @@
 
     </div>
 
+
 </body>
+
+ <!--Footer-->
+ <footer class="bg-white">
+    <div class="container mx-auto px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <svg width="40" height="40" viewBox="0 0 20 100">
+          <polygon points="0,50 100,0 100,100" fill="black" />
+        </svg>
+        <div class="flex-1 mb-6 text-black">
+
+
+          <a class="text-black-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+
+            Koro
+          </a>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Links</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Social</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Company</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
 
 
 <script src="js/main.js"></script>
@@ -124,6 +200,7 @@
         document.getElementById("barra_busqueda").oninput = filterEvent
     }
 </script>
+
 
 
 
