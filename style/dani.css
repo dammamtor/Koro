@@ -6,33 +6,50 @@
 
 /* Estilo general */
 body {
-    background-color: var(--main-color1); /* Cambia el fondo del body a un tono más claro */
+    background-color: var(--main-color1);
+    /* Cambia el fondo del body a un tono más claro */
 }
 
 /* Sección general */
 .seccion {
-    background-color: var(--main-color4); /* Utiliza un color más oscuro para destacar las secciones */
-    color: white;
-    padding: 40px; /* Añade espacio interno para mejorar el diseño */
-    border-radius: 10px; /* Agrega bordes redondeados */
+    width: 100%;
+
+    background-color: var(--main-color2);
+
 }
 
+#eventos {
+    display: flex;
+    color: black;
+    font-size: 1.1em;
+    flex-wrap: wrap;
+}
+
+
 /* Títulos */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--main-color3); /* Utiliza un color llamativo para los títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--main-color3);
+    /* Utiliza un color llamativo para los títulos */
 }
 
 /* Eventos */
-#eventos {
+#eventosg {
     font-size: 1.1em;
-    color : white;
+    color: white;
 }
 
 .header-eventos {
     font-size: 4vw;
     font-family: 'CMU Typewriter Text', sans-serif;
-    border-bottom: 2px solid var(--main-color3); /* Utiliza un borde más grueso y con el color llamativo */
-    padding-bottom: 10px; /* Añade espacio en la parte inferior del encabezado */
+    border-bottom: 2px solid var(--main-color3);
+    /* Utiliza un borde más grueso y con el color llamativo */
+    padding-bottom: 10px;
+    /* Añade espacio en la parte inferior del encabezado */
 }
 
 /* Tarjeta de juego al estilo DOOM mejorada */
@@ -50,8 +67,10 @@ h1, h2, h3, h4, h5, h6 {
     height: 350px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Añade para ocultar el exceso de la imagen */
-    transition: transform 0.3s ease-in-out; /* Añade una transición suave */
+    overflow: hidden;
+    /* Añade para ocultar el exceso de la imagen */
+    transition: transform 0.3s ease-in-out;
+    /* Añade una transición suave */
 }
 
 /* Añade un efecto de escala al pasar el mouse */
@@ -60,32 +79,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.card-model {
-    border: 2px solid var(--main-color3); /* Bordes más gruesos y con el color llamativo */
-    height: 70vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Agrega una sombra más pronunciada */
-}
-
-.card-model .titulo {
-    font-size: 1.8em; /* Aumenta el tamaño del texto del título */
-    margin-bottom: 10px; /* Añade espacio en la parte inferior del título */
-}
-
-.card-model .imagen {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px; /* Agrega bordes redondeados a la imagen */
-}
 
 /* Botón de jugar */
 .btn-jugar {
@@ -111,4 +104,201 @@ footer {
     padding: 20px;
     text-align: center;
     border-top: 2px solid var(--main-color3);
+}
+
+.header-eventos {
+    text-align: center;
+    font-size: 3vw;
+    display: block;
+    background-color: var(--main-color2);
+    font-family: 'CMU Typewriter Text', sans-serif;
+    color: black;
+    border-bottom: 1px solid black;
+    padding: 1em;
+
+
+}
+
+:root {
+    --main-color1: #ffa17a;
+    --main-color2: #f6eee2;
+    --main-color3: #005b5f;
+    --main-color4: #1cb0ad;
+    --main-color5: hsla(183, 100%, 19%, 0);
+}
+
+/*CARDS GAMES*/
+.card-model {
+    border: 1px solid black;
+    width: 33%;
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+
+}
+
+.card-model .titulo {
+
+    margin-top: 1.5vh;
+    font-size: 1.6em;
+
+}
+
+.card-model .imagen {
+
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url(../games/images/pacman.jpg);
+}
+
+.card-model .imagen2 {
+
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url(../games/images/streetfighter2.jpg);
+}
+
+.card-model .imagen3 {
+
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url(../games/images/dkong.jpg);
+}
+
+.card-model .imagen4 {
+
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url(../games/images/galaga.jpg);
+}
+
+.card-model .imagen5 {
+
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url(../games/images/spaceinvaders.png);
+}
+
+.card-model .imagen6 {
+
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url(../games/images/metalslug.jpg);
+}
+
+.event-model {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.event-model .imagen {
+    width: 100%;
+    height: 40vh;
+    background-image: url(../images/logo.PNG);
+    background-size: contain;
+    background-position: center;
+}
+
+.event-model .contenido {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        'h1 h1 h2 h2'
+        'h1 h1 h3 h3'
+        'h1 h1 h4 h4'
+        'h1 h1 h5 h5';
+
+    font-family: 'CMU Typewriter Text', sans-serif;
+    font-size: 1.7em;
+    font-weight: 900;
+    color: black;
+
+
+    
+}
+
+.event-model .titulo {
+    font-size: 3em;
+    grid-area: h1;
+    border: 2px solid black;
+    padding-left: 1em;
+    padding-right: 1em;;
+
+}
+
+.event-model .fecha {
+    font-size: 2em;
+    grid-area: h2;
+    border: 2px solid black;
+    padding-left: 1em;
+    
+}
+
+.event-model .descripcion {
+    font-size: 2em;
+    grid-area: h3;
+    border: 2px solid black;
+    padding-left: 1em;
+    
+}
+
+.event-model .detalles {
+    font-size: 2em;
+    grid-area: h4;
+    border: 2px solid black;
+    padding-left: 1em;
+    
+}
+
+
+.event-model .autor {
+    font-size: 2em;
+    grid-area: h5;
+    border: 2px solid black;
+    padding-left: 1em;
+    
+}
+
+.event-model p{
+    font-size: 0.4em;
+    font-weight: 400;
+    
+    
+    
+}
+
+.event-model button{
+    font-size: 30%;
+    font-weight: 400;
+    
+   
+    
 }
