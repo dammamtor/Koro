@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo evento</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="style/dani.css">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/lato');
+        @import url('https://fonts.cdnfonts.com/css/cmu-typewriter-text');
+
+        :root {
+            --main-color1: #ffa17a;
+            --main-color2: #f6eee2;
+            --main-color3: #005b5f;
+            --main-color4: #1cb0ad;
+        }
+
+        .gradient {
+            background-image: url("./images/logo.PNG");
+            /* background: linear-gradient(270deg, var(--main-color4) 0%, var(--main-color1) 100%); */
+        }
+
+        #init {
+            height: 100vh;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        #contenedor {
+            border: solid black 2px;
+            position: relative;
+            overflow: hidden;
+            width: 60vw;
+        }
+
+        #image {
+            background: linear-gradient(270deg, var(--main-color4) 0%, var(--main-color1) 100%);
+            background-image: url("./images/logo.PNG");
+            background-position: center;
+            background-size: cover;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            left: 52%;
+            border: solid black 2px;
+          
+        }
+
+        footer {
+            margin-top: auto;
+        }
+    </style>
+
+</head>
+
+<body class="leading-normal tracking-normal gradient font-sans">
+
+
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+            <div class="pl-4 flex items-center">
+
+                <svg width="40" height="40" viewBox="0 0 20 100">
+                    <polygon points="0,50 100,0 100,100" fill="white" />
+                </svg>
+                <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                    href="index.html"> Koro
+                </a>
+            </div>
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-center flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Reviews</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-slate-800 hover:text-underline py-2 px-4"
+                            href="#">Eventos</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-slate-800 hover:text-underline py-2 px-4"
+                            href="#">Precios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+
+
+
+    <!-- ZONA DE ANADIR -->
+
+
+
+
+
+
+
+    <div id="contenedor" class=" mx-auto mt-32  bg-white rounded-md shadow-mds w-full"
+        style="display:flex;">
+        <div id="image"></div>
+
+        <div class="contenido p-8" style="display:flex; flex-direction: column;">
+            <h1 class="text-2xl font-bold mb-4 ">Tu nuevo evento Koro</h1>
+            <form>
+                <label for="descripcion" class="block text-sm font-semibold mb-1">Descripción:</label>
+                <textarea name="descripcion" id="descripcion" cols="70" rows="6"></textarea>
+
+
+                <label for="clave" class="block text-sm font-semibold mb-1">Fecha:</label>
+                <input type="date" id="clave" name="clave" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4">
+
+                <label for="imagen" class="block text-sm font-semibold mb-1">Imagen:</label>
+                <input type="file" id="imagen" name="imagen" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4">
+
+
+                <button type="button"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition">Crear
+                    evento</button>
+
+        </div>
+    </div>
+
+    </form>
+    </div>
+
+
+
+    <!--Footer-->
+    <footer class="bg-white">
+        <div class="container mx-auto px-8">
+            <div class="w-full flex flex-col md:flex-row py-6">
+                <svg width="40" height="40" viewBox="0 0 20 100">
+                    <polygon points="0,50 100,0 100,100" fill="black" />
+                </svg>
+                <div class="flex-1 mb-6 text-black">
+
+
+                    <a class="text-black-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+
+                        Koro
+                    </a>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase text-gray-500 md:mb-6">Links</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase text-gray-500 md:mb-6">Social</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase text-gray-500 md:mb-6">Company</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official
+                                Blog</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About
+                                Us</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

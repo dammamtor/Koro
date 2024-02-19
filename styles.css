@@ -59,15 +59,26 @@ nav{
 
 
   text-align: center;
-  height: 90vh;
+  border: solid 2px black;
+  overflow: hidden;
+  height:49rem;
 
   /* grid-gap: 1px; */
+}
+
+.container-image{
+  border: solid black 1px;
+  padding-top: 1em;
+  padding: 1em;
+
+
 }
 
 .container1 {
   border: solid black 1px;
   padding-top: 1em;
   padding: 1em;
+ 
 }
 
 .uno {
@@ -89,9 +100,10 @@ nav{
 }
 
 #primera p {
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 100;
   padding: 1em;
+
 }
 
 .tres {
@@ -507,8 +519,8 @@ form:valid .fa{
  
   background-repeat: no-repeat;
   background-position: center;
-  width: 20%;
-  height: 20%;
+  width: 22%;
+  height: 22%;
 
 }
 
