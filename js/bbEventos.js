@@ -434,3 +434,6 @@ function returnBySearch(search, city){
     }
     return result;
 }
+function getByPos(pos){
+    return BB[pos]
+}

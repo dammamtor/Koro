@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./events.css">
- 
+
 
 
   <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
@@ -24,6 +24,24 @@
 
   </style>
 </head>
+
+<script src="js/bbEventos.js">
+</script>
+<script>
+  function chargeEvent(evento){
+    document.getElementsByClassName("titulo-content")[0].innerText = evento.event
+    document.getElementsByClassName("fecha-content")[0].innerText = new Date().getTime()
+    document.getElementsByClassName("descripcion-content")[0].innerText = evento.description  
+    document.getElementsByClassName("autor-content")[0].innerText = evento.creator
+  }
+  window.onload = function () {
+    const urlString = window.location.search
+    const urlParams = new URLSearchParams(urlString)
+    var pos = urlParams.get('pos')
+    var evento = getByPos(pos)
+    chargeEvent(evento)
+  }
+</script>
 
 <body>
   <!--Nav-->
@@ -59,16 +77,16 @@
           </li>
         </ul>
         <a href="./login.html">
-          <button id="navAction"
+          <!-- <button id="navAction"
             class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Log in
-          </button>
+          </button> -->
         </a>
       </div>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
   </nav>
-  
+
 
   <div class="event-model">
 
@@ -77,100 +95,114 @@
     <div class="imagen"></div>
     <div class="contenido">
       <h2 class="titulo">Ejemplo titulo
-        <p class="titulo-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid nam maiores a nostrum neque ipsa, quo labore eius, aut saepe animi. Velit rem pariatur incidunt porro, numquam assumenda quos est?</p>
+        <p class="titulo-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid nam maiores a
+          nostrum neque ipsa, quo labore eius, aut saepe animi. Velit rem pariatur incidunt porro, numquam assumenda
+          quos est?</p>
 
         <button
-        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Unirse</button>
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Unirse</button>
 
 
       </h2>
-      
-      
 
-      <div class="fecha">Fecha y Hora <p class="fecha-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem doloremque voluptatibus distinctio, in animi, dignissimos ullam perferendis hic similique facere dolor. Blanditiis incidunt omnis molestiae nam labore! Voluptatum, esse.</p></div>
-      <div class="descripcion">Descripción <p class="descripcion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem doloremque voluptatibus distinctio, in animi, dignissimos ullam perferendis hic similique facere dolor. Blanditiis incidunt omnis molestiae nam labore! Voluptatum, esse.</p></div>
-      <div class="detalles">Detalles <p class="detalles-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem doloremque voluptatibus distinctio, in animi, dignissimos ullam perferendis hic similique facere dolor. Blanditiis incidunt omnis molestiae nam labore! Voluptatum, esse.</p></div>
-      <div class="autor">Autor <p class="autor-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem doloremque voluptatibus distinctio, in animi, dignissimos ullam perferendis hic similique facere dolor. Blanditiis incidunt omnis molestiae nam labore! Voluptatum, esse.</p></div>
+
+
+      <div class="fecha">Fecha y Hora <p class="fecha-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Modi voluptatem doloremque voluptatibus distinctio, in animi, dignissimos ullam perferendis hic similique
+          facere dolor. Blanditiis incidunt omnis molestiae nam labore! Voluptatum, esse.</p>
+      </div>
+      <div class="descripcion">Descripción <p class="descripcion-content">Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Modi voluptatem doloremque voluptatibus distinctio, in animi, dignissimos ullam perferendis
+          hic similique facere dolor. Blanditiis incidunt omnis molestiae nam labore! Voluptatum, esse.</p>
+      </div>
+      <div class="detalles">Detalles <p class="detalles-content">Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Modi voluptatem doloremque voluptatibus distinctio, in animi, dignissimos ullam perferendis hic
+          similique facere dolor. Blanditiis incidunt omnis molestiae nam labore! Voluptatum, esse.</p>
+      </div>
+      <div class="autor">Autor <p class="autor-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+          voluptatem doloremque voluptatibus distinctio, in animi, dignissimos ullam perferendis hic similique facere
+          dolor. Blanditiis incidunt omnis molestiae nam labore! Voluptatum, esse.</p>
+      </div>
     </div>
 
   </div>
 
-  
 
 
 
-  
-    <!--Footer-->
-    <footer class="bg-white">
-        <div class="container mx-auto px-8">
-          <div class="w-full flex flex-col md:flex-row py-6">
-            <svg width="40" height="40" viewBox="0 0 20 100">
-              <polygon points="0,50 100,0 100,100" fill="black" />
-            </svg>
-            <div class="flex-1 mb-6 text-black">
-  
-  
-              <a class="text-black-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-  
-                Koro
-              </a>
-            </div>
-            <div class="flex-1">
-              <p class="uppercase text-gray-500 md:mb-6">Links</p>
-              <ul class="list-reset mb-6">
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
-                </li>
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
-                </li>
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
-                </li>
-              </ul>
-            </div>
-            <div class="flex-1">
-              <p class="uppercase text-gray-500 md:mb-6">Legal</p>
-              <ul class="list-reset mb-6">
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
-                </li>
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
-                </li>
-              </ul>
-            </div>
-            <div class="flex-1">
-              <p class="uppercase text-gray-500 md:mb-6">Social</p>
-              <ul class="list-reset mb-6">
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
-                </li>
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
-                </li>
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
-                </li>
-              </ul>
-            </div>
-            <div class="flex-1">
-              <p class="uppercase text-gray-500 md:mb-6">Company</p>
-              <ul class="list-reset mb-6">
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
-                </li>
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
-                </li>
-                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+
+
+  <!--Footer-->
+  <footer class="bg-white">
+    <div class="container mx-auto px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <svg width="40" height="40" viewBox="0 0 20 100">
+          <polygon points="0,50 100,0 100,100" fill="black" />
+        </svg>
+        <div class="flex-1 mb-6 text-black">
+
+
+          <a class="text-black-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+
+            Koro
+          </a>
         </div>
-  
-      </footer>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Links</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Social</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Company</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
 
 </html>
