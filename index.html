@@ -86,7 +86,7 @@
 
         <button
           class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-          Subscribe
+          <a href="register.html">Subscribe</a>
         </button>
       </div>
       <!--Right Col-->
@@ -111,7 +111,7 @@
         <h2>¡Explora, Conecta, Celebra!</h2>
         <p>Descubre eventos sociales en tu ciudad o da vida a tus propias ideas. Con nuestra plataforma intuitiva, encuentras tu núcleo social y construyes conexiones auténticas</p>
         <button
-          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Visit</button>
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black"><a href="register.html">Visit!</a></button>
       </div>
 
       
@@ -400,7 +400,7 @@
       var divEvento = document.getElementsByClassName("card-model")[0]
       var eventosJson = returnNumber(6)
       divContenedor.innerHTML = ''
-      divContenedor = loadEventsIndex(divContenedor, divEvento, eventosJson)
+      divContenedor = loadEventsIndexNoLog(divContenedor, divEvento, eventosJson)
     }
     window.addEventListener('scroll', fitNav)
   }
