@@ -4,6 +4,14 @@
 /* Importa los estilos de Tailwind CSS */
 @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
 
+:root {
+    --main-color1: #1cb0ad;
+    --main-color2: #f6eee2;
+    --main-color3: #005b5f;
+    --main-color4: #ffa17a;
+    --main-color5: hsla(183, 100%, 19%, 0);
+}
+
 /* Estilo general */
 body {
     background-color: var(--main-color1);
@@ -33,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--main-color3);
+    color: var(--main-color2);
     /* Utiliza un color llamativo para los títulos */
 }
 
@@ -119,13 +127,6 @@ footer {
 
 }
 
-:root {
-    --main-color1: #ffa17a;
-    --main-color2: #f6eee2;
-    --main-color3: #005b5f;
-    --main-color4: #1cb0ad;
-    --main-color5: hsla(183, 100%, 19%, 0);
-}
 
 /*CARDS GAMES*/
 .card-model {
@@ -216,15 +217,15 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .event-model .imagen {
     width: 100%;
     height: 40vh;
-    background-image: url(../images/logo.PNG);
-    background-size: contain;
+    background-image: url(../images/pexels-luis-quintero-2774556.jpg);
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .event-model .contenido {
@@ -242,7 +243,7 @@ footer {
     color: black;
 
 
-    
+
 }
 
 .event-model .titulo {
@@ -250,7 +251,8 @@ footer {
     grid-area: h1;
     border: 2px solid black;
     padding-left: 1em;
-    padding-right: 1em;;
+    padding-right: 1em;
+    ;
 
 }
 
@@ -259,7 +261,7 @@ footer {
     grid-area: h2;
     border: 2px solid black;
     padding-left: 1em;
-    
+
 }
 
 .event-model .descripcion {
@@ -267,7 +269,7 @@ footer {
     grid-area: h3;
     border: 2px solid black;
     padding-left: 1em;
-    
+
 }
 
 .event-model .detalles {
@@ -275,7 +277,7 @@ footer {
     grid-area: h4;
     border: 2px solid black;
     padding-left: 1em;
-    
+
 }
 
 
@@ -284,21 +286,21 @@ footer {
     grid-area: h5;
     border: 2px solid black;
     padding-left: 1em;
-    
+
 }
 
-.event-model p{
+.event-model p {
     font-size: 0.4em;
     font-weight: 400;
-    
-    
-    
+
+
+
 }
 
-.event-model button{
+.event-model button {
     font-size: 30%;
     font-weight: 400;
-    
-   
-    
+
+
+
 }
