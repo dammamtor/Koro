@@ -5,6 +5,14 @@ function loadEventsIndex(divContenedor, divRepetir, eventos) {
     for (e of eventos) {
         descField = ""
         repetido = divRepetir.cloneNode(true)
+        // if(e.id%3==0){
+        //     repetido.style.width= "66%"
+        // }else{
+        //     if(e.id%5==0){
+        //         repetido.style.width= "66%"
+        //     }else{
+        //     }
+        // }
         repetido.querySelector('.imagen').style.backgroundImage = "url(" + e.image + ")"
         repetido.querySelector('.titulo').innerText = e.event
         if (e.official) {

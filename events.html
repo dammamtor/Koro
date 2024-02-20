@@ -210,7 +210,8 @@
     var eventosJsonActual;
     var divContenedor;
     var divEvento
-    function filterEvent(){
+    function filterEvent(e){
+      e.preventDefault()
         var city = document.getElementById("citySelector").value
         var search = document.getElementById("barra_busqueda").value
         eventosJsonActual = returnBySearch(search, city)
