@@ -388,7 +388,53 @@ input:checked+.slide-container .nav label {
   .parallax img:hover {
     clip-path: inset(0 0 0 var(--_f) round var(--r));
     --_t: translateX(calc(-1*var(--_f))) rotateY(calc(-1*var(--_a)))
+
   }
+
+  .parallax img:hover ~ .nombre1 {
+    
+    opacity: 0.5;
+    width:100%;
+    
+  }
+
+  .parallax img:nth-of-type(2):hover ~ .nombre2 {
+    
+    opacity: 0.5;
+    width:100%;
+    
+  }
+
+  .parallax img:nth-of-type(3):hover ~ .nombre3 {
+    
+    opacity: 0.5;
+    width:100%;
+    
+  }
+
+
+
+
+
+  .nombre1{
+    position:relative;
+    opacity:0;
+    width:0px;
+  }
+
+  .nombre2{
+    position:relative;
+    opacity:0;
+    width:0px;
+  }
+
+  .nombre3{
+    position:relative;
+    opacity:0;
+    width:0px;
+  }
+
+
   
   .parallax {
     font-family: 'CMU Typewriter Text', sans-serif;
