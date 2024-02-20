@@ -7,11 +7,16 @@
   <title>Koro Games</title>
   <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <link rel="stylesheet" href="../style/dani.css">
+  <style>
+    body, nav{
+      background-color: #000000;
+    }
+  </style>
 </head>
 
-<body style="background: #000000">
+<body>
   <!--NAV-->
-  <nav id="header" class="fixed w-full z-30 top-0 text-black" style="background: #000000">
+  <nav id="header" class="fixed w-full z-30 top-0 text-black">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
       <div class="pl-4 flex items-center">
         <svg width="40" height="40" viewBox="0 0 20 100">
@@ -33,7 +38,7 @@
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
               <a class="inline-block py-2 px-4 text-white font-bold no-underline"
-                href="#">About</a>
+                href="../about.html">About</a>
             </li>
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4"
