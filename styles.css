@@ -136,6 +136,14 @@ nav{
   color: black;
   font-size: 1.1em;
   flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+
+.eventos-sec {
+
+  margin-top: 8vh;
 }
 
 .header-eventos {
@@ -173,12 +181,14 @@ nav{
 
 .card-model .imagen {
 
-  height: 40vh;
-  width: 100%;
+  height: 55%;
+  width: 85%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   background-image: url(./images/retrato-analogico-mujer-hermosa-posando-artisticamente-interiores.jpg);
+  margin: 2em;
+  border: 2px solid black;
   
   
 }
@@ -420,18 +430,24 @@ input:checked+.slide-container .nav label {
     position:relative;
     opacity:0;
     width:0px;
+    left:-160%;
+    top:110%;
   }
 
   .nombre2{
     position:relative;
     opacity:0;
     width:0px;
+    left:-160%;
+    top:110%;
   }
 
   .nombre3{
     position:relative;
     opacity:0;
     width:0px;
+    left:-160%;
+    top:110%;
   }
 
 
