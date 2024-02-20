@@ -13,10 +13,42 @@
     }
   </style>
 </head>
+<script>
+  
+  window.onload = function(){
+    const urlString = window.location.search
+    const urlParams = new URLSearchParams(urlString)
+    var pos = urlParams.get('game')
+    if(pos){
+      document.getElementById("puntos").innerText = Math.floor(Math.random() *10)
+      document.getElementById("alert").style.zIndex = 22
+    }
+    document.getElementById("cierra_alert").onclick = function(){
+      console.log("adsfasf")
+      document.getElementById("alert").style.zIndex = -22
+    }
+
+    }
+  </script>
 
 <body>
   <!--NAV-->
+<<<<<<< HEAD
   <nav id="header" class="fixed w-full z-30 top-0 text-black">
+=======
+  <div id="alert" style="position: absolute;z-index: -22; width: 100%;" class="bg-indigo-900 text-center py-4 lg:px-4">
+    <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+      role="alert">
+      <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
+      <span class="font-semibold mr-2 text-left flex-auto">Has ganado <span id="puntos"></span> puntos!</span>
+      <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
+      </svg>
+      <button id="cierra_alert">Cerrar </button>
+    </div>
+  </div>
+  <nav id="header" class="fixed w-full z-30 top-0 text-black" style="background: #000000">
+>>>>>>> 05af44816f4c2a67e93409f3efa485eeb636569f
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
       <div class="pl-4 flex items-center">
         <svg width="40" height="40" viewBox="0 0 20 100">
