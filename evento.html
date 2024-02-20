@@ -76,6 +76,10 @@
     var pos = urlParams.get('pos')
     var evento = getByPos(pos)
     chargeEvent(evento)
+    document.getElementById("bt-unirse").onclick= function(){
+      document.getElementById("bt-unirse").innerText = "Te has unido!"
+      
+    }
   }
 </script>
 
@@ -136,7 +140,7 @@
           nostrum neque ipsa, quo labore eius, aut saepe animi. Velit rem pariatur incidunt porro, numquam assumenda
           quos est?</h2>
 
-        <button
+        <button id="bt-unirse"
           class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Unirse</button>
 
           <div id="map" style="width: 30vw;height: 20vw;margin-bottom: 2vw;;">
