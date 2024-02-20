@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - HTML5 Pacman</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Permanent+Marker'><link rel="stylesheet" href="./style.css">
+  <title>Koro's Pac-Man</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Permanent+Marker'>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<div id="shim">shim for font face</div>
+  <!-- partial:index.partial.html -->
+  <div id="shim">shim for font face</div>
 
-<h1>HTML5 Pacman</h1>
+  <h1>HTML5 Pacman</h1>
 
-<p><a href="https://github.com/daleharvey/pacman" target="_blank">Credits: https://github.com/daleharvey/pacman</a></p>
+  <p><a href="https://github.com/daleharvey/pacman" target="_blank">Credits: https://github.com/daleharvey/pacman</a>
+  </p>
 
-<div id="pacman"></div>
-<!-- partial -->
+  <div id="pacman"></div>
+  <div class="flex justify-center items-center mt-32">
+    <a href="../../games-inicio.html?game=true">
+      <button type="button"
+        class="bg-blue-500 text-white px-4 py-2 mb-2 rounded-md hover:bg-blue-600 transition focus:outline-none focus:ring focus:border-blue-300">
+        Regresar a Koro Games
+      </button>
+    </a>
+  </div>
+  <!-- partial -->
   <script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="./script.js"></script>
 
 </body>
+
 </html>
