@@ -29,10 +29,23 @@
 </script>
 <script>
   function chargeEvent(evento){
+    document.getElementsByClassName("imagen")[0].style.backgroundImage = "url(" + evento.image + ")"
+    // document.getElementsByClassName("titulo")[0].innerText = evento.event
     document.getElementsByClassName("titulo-content")[0].innerText = evento.event
-    document.getElementsByClassName("fecha-content")[0].innerText = new Date().getTime()
+    var start = new Date(2024, 0, 1)
+    var end = new Date()
+    var date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
+    document.getElementsByClassName("fecha-content")[0].innerText = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()
     document.getElementsByClassName("descripcion-content")[0].innerText = evento.description  
     document.getElementsByClassName("autor-content")[0].innerText = evento.creator
+    var precio = evento.price
+    if(precio==0)
+      precio = 'GRATIS'
+    var labels="";
+    for(i of evento.labels){
+      labels+=i+", "
+    }
+    document.getElementsByClassName("detalles-content")[0].innerHTML = '<h1>Precio: '+precio+'</h1><br><h1>Etiquetas: '+labels+'</h1>'
   }
   window.onload = function () {
     const urlString = window.location.search
@@ -94,16 +107,16 @@
 
     <div class="imagen"></div>
     <div class="contenido">
-      <h2 class="titulo">Ejemplo titulo
-        <p class="titulo-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid nam maiores a
+      <div class="titulo">
+        <h2 class="titulo-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid nam maiores a
           nostrum neque ipsa, quo labore eius, aut saepe animi. Velit rem pariatur incidunt porro, numquam assumenda
-          quos est?</p>
+          quos est?</h2>
 
         <button
           class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Unirse</button>
 
 
-      </h2>
+        </div>
 
 
 
