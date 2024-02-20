@@ -27,25 +27,48 @@
 
 <script src="js/bbEventos.js">
 </script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBy4zxwGS5f7tldZFxn1PUMmjuHpKl17Do"></script>
 <script>
-  function chargeEvent(evento){
+  var map;
+  function chargeEvent(evento) {
     document.getElementsByClassName("imagen")[0].style.backgroundImage = "url(" + evento.image + ")"
     // document.getElementsByClassName("titulo")[0].innerText = evento.event
     document.getElementsByClassName("titulo-content")[0].innerText = evento.event
     var start = new Date(2024, 0, 1)
     var end = new Date()
     var date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
-    document.getElementsByClassName("fecha-content")[0].innerText = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()
-    document.getElementsByClassName("descripcion-content")[0].innerText = evento.description  
+    document.getElementsByClassName("fecha-content")[0].innerText = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear()
+    document.getElementsByClassName("descripcion-content")[0].innerText = evento.description
     document.getElementsByClassName("autor-content")[0].innerText = evento.creator
     var precio = evento.price
-    if(precio==0)
+    if (precio == 0)
       precio = 'GRATIS'
-    var labels="";
-    for(i of evento.labels){
-      labels+=i+", "
+    var labels = "";
+    for (i of evento.labels) {
+      labels += i + ", "
     }
-    document.getElementsByClassName("detalles-content")[0].innerHTML = '<h1>Precio: '+precio+'</h1><br><h1>Etiquetas: '+labels+'</h1>'
+    document.getElementsByClassName("detalles-content")[0].innerHTML = '<h1>Precio: ' + precio + '</h1><br><h1>Etiquetas: ' + labels + '</h1>'
+
+    //mapa
+    console.log(evento.location)
+    map = document.getElementById("map")
+    var centro = evento.location
+    var opt = {
+      center: centro,
+      zoom: 15
+    }
+    var mapa = new google.maps.Map(map, opt)
+    var marker = new google.maps.Marker({
+      position: centro,
+      map: mapa,
+      title: evento.title,
+      animation: google.maps.Animation.BOUNCE
+    })
+    var infowindow = new google.maps.InfoWindow({
+      map: mapa,
+      position: new google.maps.LatLng(evento.location.lat, evento.location.lng),
+      content: '<img src="'+evento.image+'" style="width: 100px"></img>'
+    })
   }
   window.onload = function () {
     const urlString = window.location.search
@@ -65,7 +88,8 @@
         <svg width="40" height="40" viewBox="0 0 20 100">
           <polygon points="0,50 100,0 100,100" fill="white" />
         </svg>
-        <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#"> Koro
+        <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+          href="index _logueado.html"> Koro
         </a>
       </div>
       <div class="block lg:hidden pr-4">
@@ -115,8 +139,10 @@
         <button
           class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-outbtn btn-black">Unirse</button>
 
+          <div id="map" style="width: 30vw;height: 20vw;margin-bottom: 2vw;;">
 
-        </div>
+          </div>
+      </div>
 
 
 
