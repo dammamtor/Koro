@@ -15,7 +15,7 @@ function generateRandomLocation(city) {
     const randomLat = cityCoords.lat + (Math.random() - 0.5) * 0.2;
     const randomLon = cityCoords.lon + (Math.random() - 0.5) * 0.2;
 
-    return { lat: randomLat, lon: randomLon };
+    return { lat: randomLat, lng: randomLon };
 }
 var BB = [
     {
