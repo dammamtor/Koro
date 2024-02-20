@@ -27,7 +27,8 @@ var BB = [
         labels: ["música", "entretenimiento"],
         price: 20,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 0
     },
     {
         event: "Festival de Arte Iberia",
@@ -38,7 +39,8 @@ var BB = [
         labels: ["arte", "cultura"],
         price: 15,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 1
     },
     {
         event: "Cine en Casa con Tapas",
@@ -49,7 +51,8 @@ var BB = [
         labels: ["cine", "gastronomía"],
         price: 5,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 2
     },
     {
         event: "KFC Fiesta de Pollo",
@@ -60,7 +63,8 @@ var BB = [
         labels: ["comida", "evento"],
         price: 15,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 3
     },
     {
         event: "Gran Fiesta de Cumpleaños Sorpresa",
@@ -71,7 +75,8 @@ var BB = [
         labels: ["celebración", "sorpresa"],
         price: 10,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 4
     },
     {
         event: "Aventura Outdoor con Decathlon",
@@ -82,7 +87,8 @@ var BB = [
         labels: ["deporte", "aventura"],
         price: 15,
         city: "Valencia",
-        location: generateRandomLocation("Valencia")
+        location: generateRandomLocation("Valencia"),
+        id: 5
     },
     {
         event: "Partido de Exhibición Betis vs. Invitados",
@@ -93,7 +99,8 @@ var BB = [
         labels: ["deporte", "fútbol"],
         price: 25,
         city: "Sevilla",
-        location: generateRandomLocation("Sevilla")
+        location: generateRandomLocation("Sevilla"),
+        id: 6
     },
     {
         event: "Picnic en el Parque",
@@ -104,7 +111,8 @@ var BB = [
         labels: ["ocio", "plan"],
         price: 0,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 7
     },
     {
         event: "Carrefour Fitness Challenge",
@@ -115,7 +123,8 @@ var BB = [
         labels: ["deporte", "salud"],
         price: 5,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 8
     },
     {
         event: "Encuentro Ciudadano del PP Madrid",
@@ -126,7 +135,8 @@ var BB = [
         labels: ["política", "participación"],
         price: 0,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 9
     },
 
     {
@@ -138,7 +148,8 @@ var BB = [
         labels: ["ocio", "reunión"],
         price: 0,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 10
     },
     {
         event: "Calistenia en el Parque",
@@ -149,7 +160,8 @@ var BB = [
         labels: ["deporte", "entrenamiento"],
         price: 0,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 11
     },
 
     {
@@ -161,7 +173,8 @@ var BB = [
         labels: ["deporte", "aventura", "natación"],
         price: 0,
         city: "Sevilla",
-        location: generateRandomLocation("Sevilla")
+        location: generateRandomLocation("Sevilla"),
+        id: 12
     },
 
     {
@@ -173,7 +186,8 @@ var BB = [
         labels: ["gastronomía", "ocio"],
         price: 10,
         city: "Sevilla",
-        location: generateRandomLocation("Sevilla")
+        location: generateRandomLocation("Sevilla"),
+        id: 13
     },
     {
         event: "Baile en la Plaza",
@@ -184,7 +198,8 @@ var BB = [
         labels: ["baile", "entretenimiento"],
         price: 0,
         city: "Valencia",
-        location: generateRandomLocation("Valencia")
+        location: generateRandomLocation("Valencia"),
+        id: 14
     },
     {
         event: "Desfile de Moda Uniqlo",
@@ -195,7 +210,8 @@ var BB = [
         labels: ["moda", "tendencias"],
         price: 10,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 15
     },
     {
         event: "Quedada de Ajedrez en el Parque",
@@ -206,7 +222,8 @@ var BB = [
         labels: ["ajedrez", "entretenimiento"],
         price: 0,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 16
     },
     {
         event: "Asamblea Abierta del PSOE",
@@ -217,7 +234,8 @@ var BB = [
         labels: ["política", "participación"],
         price: 0,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 17
     },
     {
         event: "Picnic de Pan en Plaza España",
@@ -228,7 +246,8 @@ var BB = [
         labels: ["picnic", "gastronomía"],
         price: 0,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 18
     },
     {
         event: "Manifestación por el Cambio Climático",
@@ -239,7 +258,8 @@ var BB = [
         labels: ["protesta", "cambio climático"],
         price: 0,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 19
     },
     {
         event: "Experiencia Gourmet: Churros de 'La Tía Paqui'",
@@ -250,7 +270,8 @@ var BB = [
         labels: ["gourmet", "exclusivo", "gastronomía"],
         price: 50,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 20
     },
     {
         event: "Escape Room Challenge",
@@ -261,7 +282,8 @@ var BB = [
         labels: ["aventura", "misterio", "escape room"],
         price: 20,
         city: "Valencia",
-        location: generateRandomLocation("Valencia")
+        location: generateRandomLocation("Valencia"),
+        id: 21
     },
     {
         event: "Noche Latina en Puro Latino",
@@ -272,7 +294,8 @@ var BB = [
         labels: ["música latina", "baile", "fiesta"],
         price: 15,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 22
     }
     ,
     {
@@ -284,7 +307,8 @@ var BB = [
         labels: ["boxeo profesional", "deporte", "espectáculo"],
         price: 50,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 23
     }
     ,
     {
@@ -296,7 +320,8 @@ var BB = [
         labels: ["arte", "performance", "experiencia única"],
         price: 10,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 24
     }
     ,
     {
@@ -308,7 +333,8 @@ var BB = [
         labels: ["baloncesto", "deporte", "diversión"],
         price: 0,
         city: "Valencia",
-        location: generateRandomLocation("Valencia")
+        location: generateRandomLocation("Valencia"),
+        id: 25
     }
     ,
     {
@@ -320,7 +346,8 @@ var BB = [
         labels: ["desafío", "seguridad", "bomberos"],
         price: 5,
         city: "Sevilla",
-        location: generateRandomLocation("Sevilla")
+        location: generateRandomLocation("Sevilla"),
+        id: 26
     }
     ,
     {
@@ -332,7 +359,8 @@ var BB = [
         labels: ["imitación", "humor", "fanáticos"],
         price: 10,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 27
     }
     ,
     {
@@ -344,7 +372,8 @@ var BB = [
         labels: ["surrealismo", "experiencia", "imaginación"],
         price: 15,
         city: "Valencia",
-        location: generateRandomLocation("Valencia")
+        location: generateRandomLocation("Valencia"),
+        id: 28
     }
     ,
     {
@@ -356,7 +385,8 @@ var BB = [
         labels: ["experiencia", "trascendencia", "nebuloso"],
         price: 15,
         city: "Sevilla",
-        location: generateRandomLocation("Sevilla")
+        location: generateRandomLocation("Sevilla"),
+        id: 29
     },
     {
         event: "Festival de Ofertas Aliexpress",
@@ -367,7 +397,8 @@ var BB = [
         labels: ["compras", "ofertas", "tecnología"],
         price: 0,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 30
     },
     {
         event: "Encuentro Anti-Koro",
@@ -378,7 +409,8 @@ var BB = [
         labels: ["críticas", "opiniones", "humor"],
         price: 0,
         city: "Barcelona",
-        location: generateRandomLocation("Barcelona")
+        location: generateRandomLocation("Barcelona"),
+        id: 31
     },
     {
         event: "Travesía Onírica: Ritos en la Noche Estrellada",
@@ -389,7 +421,8 @@ var BB = [
         labels: ["onirismo", "experiencia", "Madrid"],
         price: 20,
         city: "Madrid",
-        location: generateRandomLocation("Madrid")
+        location: generateRandomLocation("Madrid"),
+        id: 32
     }
     
 ];

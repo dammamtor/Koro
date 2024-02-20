@@ -1,7 +1,6 @@
 function loadEventsIndex(divContenedor, divRepetir, eventos) {
     divContenedor.innerHtml = ''
     var repetido;
-    var num = 0;
     var descField
     for (e of eventos) {
         descField = ""
@@ -17,10 +16,8 @@ function loadEventsIndex(divContenedor, divRepetir, eventos) {
         descField += "..."
         repetido.querySelector('.texto').innerText = descField
         repetido.querySelector('.autor').innerText = e.creator
-        repetido.getElementsByTagName("button")[0].innerHTML = '<a href="evento.html?pos=' + num.toString() + '">Join</a>'
-        num++
+        repetido.getElementsByTagName("button")[0].innerHTML = '<a href="evento.html?pos=' + e.id.toString() + '">Join</a>'
         divContenedor.appendChild(repetido)
-        //console.log(repetido)
     }
     console.log(divContenedor)
     return divContenedor;
