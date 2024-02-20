@@ -136,6 +136,13 @@ nav{
   color: black;
   font-size: 1.1em;
   flex-wrap: wrap;
+
+}
+
+
+.eventos-sec {
+
+  margin-top: 8vh;
 }
 
 .header-eventos {
@@ -420,18 +427,24 @@ input:checked+.slide-container .nav label {
     position:relative;
     opacity:0;
     width:0px;
+    left:-160%;
+    top:110%;
   }
 
   .nombre2{
     position:relative;
     opacity:0;
     width:0px;
+    left:-160%;
+    top:110%;
   }
 
   .nombre3{
     position:relative;
     opacity:0;
     width:0px;
+    left:-160%;
+    top:110%;
   }
 
 
