@@ -14,7 +14,6 @@
 nav{
   background-color: var(--main-color5);
   
-  
 }
 .gradient {
   background: linear-gradient(270deg, var(--main-color3) 0%, var(--main-color2) 100%);
